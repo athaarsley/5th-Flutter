@@ -18,7 +18,7 @@ class InfoApp extends StatelessWidget {
   Widget _buildInfoCard(BuildContext context, String title, String amount) {
     return Container(
       width: MediaQuery.of(context).size.width, // Menggunakan lebar layar penuh
-      margin: EdgeInsets.symmetric(horizontal: 16, vertical: 1),
+      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 1),
       child: Card(
         color: kPrimaryColor2,
         child: Padding(
@@ -28,7 +28,7 @@ class InfoApp extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: kBlackColor,
@@ -36,7 +36,7 @@ class InfoApp extends StatelessWidget {
               ),
               Text(
                 amount,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                   color: kBlackColor,

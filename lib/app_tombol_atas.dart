@@ -33,8 +33,8 @@ class TombolAtasApp extends StatelessWidget {
           SizedBox(height: 8),
           Text(
             text,
-            style: TextStyle(
-              color: Colors.black,
+            style: const TextStyle(
+              color: kBlackColor,
               fontWeight: FontWeight.bold,
             ),
             textAlign: TextAlign.center,

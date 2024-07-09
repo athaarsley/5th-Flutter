@@ -9,7 +9,7 @@ class TransactionListApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: kBlackColor,),
+        border: Border.all(color: kBlackColor),
         borderRadius: BorderRadius.circular(15),
       ),
       margin: EdgeInsets.all(16),
@@ -25,7 +25,7 @@ class TransactionListApp extends StatelessWidget {
           ),
           ListView.builder(
             shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             itemCount: transaksiItem.length,
             itemBuilder: (context, index) {
               return _buildTransactionItem(
@@ -33,7 +33,7 @@ class TransactionListApp extends StatelessWidget {
                 transaksiItem[index].date,
                 transaksiItem[index].name,
                 transaksiItem[index].itemCount,
-                transaksiItem[index].amount
+                transaksiItem[index].amount,
               );
             },
           ),
@@ -43,11 +43,25 @@ class TransactionListApp extends StatelessWidget {
   }
 
   Widget _buildTransactionItem(String invoice, String date, String name, String itemCount, String amount) {
-    return ListTile(
-      subtitle: Text('$itemCount\n$date'),
-      trailing: Text('Rp. $amount', style: TextStyle(fontWeight: FontWeight.bold, color: kPrimaryColor)),
-      title: Text(name, style: TextStyle(fontWeight: FontWeight.bold)),
-      isThreeLine: true,
+    return Container(
+      margin: const EdgeInsets.only(left: 15, right: 15, bottom: 5, top: 5),
+      decoration: BoxDecoration(
+        color: kPrimaryColor2,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: ListTile(
+        subtitle: Text('$itemCount\n$date'),
+        trailing: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Text('$invoice', style: const TextStyle(fontWeight: FontWeight.bold, color: kPrimaryColor)),
+            Text('Rp. $amount', style: const TextStyle(fontWeight: FontWeight.bold, color: kBlackColor, fontSize: 20)),
+          ],
+        ),
+        title: Text(name, style: const TextStyle(fontWeight: FontWeight.bold)),
+        isThreeLine: true,
+      ),
     );
   }
 }

@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false, 
-      title: 'Wisata Bandung',
+      title: 'Dashboard',
       theme: ThemeData(),
       home: MainScreen(),
     );
@@ -38,7 +38,7 @@ class MainScreen extends StatelessWidget {
               border: Border.all(color: kPrimaryColor,),
               borderRadius: BorderRadius.circular(30),
             ),
-            child: Row(
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.bolt, color: kPrimaryColor),
@@ -67,7 +67,7 @@ class MainScreen extends StatelessWidget {
             end: Alignment.bottomCenter
           )
         ),
-        child: SingleChildScrollView(
+        child: const SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
