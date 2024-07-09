@@ -26,14 +26,14 @@ class TransactionListApp extends StatelessWidget {
           ListView.builder(
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
-            itemCount: mountItems.length,
+            itemCount: transaksiItem.length,
             itemBuilder: (context, index) {
               return _buildTransactionItem(
-                mountItems[index].invoice,
-                mountItems[index].date,
-                mountItems[index].name,
-                mountItems[index].itemCount,
-                mountItems[index].amount
+                transaksiItem[index].invoice,
+                transaksiItem[index].date,
+                transaksiItem[index].name,
+                transaksiItem[index].itemCount,
+                transaksiItem[index].amount
               );
             },
           ),
