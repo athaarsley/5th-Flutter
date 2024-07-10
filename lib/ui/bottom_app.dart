@@ -1,4 +1,4 @@
-import 'package:dashboard/theme.dart';
+import 'package:dashboard/model/theme.dart';
 import 'package:flutter/material.dart';
 
 class BottomApp extends StatelessWidget {

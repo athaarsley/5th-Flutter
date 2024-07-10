@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dashboard/theme.dart';
+import 'package:dashboard/model/theme.dart';
 
 class InfoApp extends StatelessWidget {
   const InfoApp({Key? key}) : super(key: key);
